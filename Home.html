@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+	<title>about</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+			margin: 0;
+			font-family: 'Poppins','Nanum Gothic', sans-serif;
+		}
+		/*데스크탑*/
+		.navbar{
+			background-color: #0a0a0a;
+			width: 100%;
+			height: 80px;
+		}
+		.navbar a img{
+			margin-left: 12px;
+			vertical-align: middle;
+		}
+		.menu{
+			float: right;
+			list-style: none;
+			padding: 0;
+			margin-right: 12px;
+			margin-top: 0;
+			margin-bottom: 0;
+			margin-left: 0;
+			}
+		.menu li{
+			float: left;
+			margin-left: 32px;
+			line-height: 64px;
+		}
+		.menu li a{
+			text-decoration: none;
+			color: #dedede;
+		}
+		.menu li a:hover{
+			color: #fff;
+		}
+		.about{
+			font-weight: 700;
+			color: #fff;
+		}
+		.carousel-item{
+			text-align: center;
+			height: 540px;
+			background-color: gray;
+		}
+		.item-1{
+			background-image: url(https://facerecordsnyc.com/wp-content/uploads/2018/12/RYUICHI-SAKAMOTO-1920x1080.jpg);
+			background-size: cover;
+			background-position: center center;
+			height: 540px;
+		}
+		.item-2{
+			background-image: url(https://www.jungle.co.kr/image/a8e647104a879e1e768535b4);
+			background-size: cover;
+			background-position: center bottom;
+			height: 540px;
+		}
+		.item-3{
+			background-image: url(https://www.noblesse.com/shop/data/board/magazine/3b55958d1e0c986e);
+			background-size: cover;
+			background-position: center top;
+			height: 540px;
+		}
+		.word h1{
+			color: #fff;
+			font-size: 96px;
+			margin-top: 32px;
+     		margin-bottom: 16px;
+		}
+		.word a{
+			text-decoration: none;
+			color: #fff;
+			font-size: 16px;
+			padding: 10px 30px;
+			margin-top: 36px;
+			border: 1px solid #f0f0f0 ;
+		}
+		.helper{
+			height: 100%;
+     		display: inline-block;
+     		vertical-align: middle;
+		}
+		.word{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.photo{
+			height: 360px;
+			width: 50%;
+			background-image: url(https://i.postimg.cc/T11SNfBz/1.png);
+			background-position: center center;
+			background-size: cover;
+			float: left;
+		}
+		.introduce{
+			background-color: #fff;
+			height: 360px;
+			width: 50%;
+			float: left;
+			padding-right: 48px;
+			padding-left: 20px;
+			padding-top: 15px;
+		}
+		.info-1{
+			width: 540px;
+			height: 360px;
+		}
+		.intro-1 h5{
+			font-size: 16px;
+			color: #4B4B4B;
+			font-weight: 600;
+			margin-top :72px;
+			margin-right: 48px;
+		}
+		.intro-1 h3{
+			font-weight: 700;
+			color: #333333;
+			font-size: 36px;
+			margin-right: 48px;
+		}
+		.intro-1 p{
+			color: #333333;
+			font-size: 14px;
+			text-align: left;
+		}
+		.clearfix{
+			clear: both;
+		}	
+		.album-page{
+			background-image: url(https://cdn.pixabay.com/photo/2016/11/29/01/22/album-1866523_1280.jpg);
+			background-position: center center;
+			background-size: cover;
+			height: 480px;
+			width: 100%;
+		}
+		.album-page h1{
+			font-size: 64px;
+			color: #fff;
+			font-weight: 700;
+			margin-left: 48px;
+			padding-top: 56px;
+			padding-bottom: 24px;
+		}
+		.album-page button{
+			margin-left: 48px;
+			padding: 5px 20px;
+			width: 140px;
+			border: 1px solid #f0f0f0;
+			background:rgba(0,0,0,0);
+			color: #f0f0f0;
+			margin-left: 48px;
+		}
+		.album-page button:hover{
+			background-color:#333333;
+			transition: 0.5s ease-in-out;
+		}
+		.info p{
+			font-size: 20px;
+			color: white;
+			border: 1px solid black;
+			border-radius: 5px;
+		}
+		.offical-site{
+			height: 480px;
+			width: 100%;
+			background-size: cover;
+			background-position: left center;
+			background-image: url(https://cdn.pixabay.com/photo/2019/05/02/16/02/piano-4173813_1280.jpg);
+			text-align: right;
+		}
+		.site h1{
+			color: #fff;
+			font-size: 64px;
+			margin-right: 48px;
+			padding-top: 56px;
+			font-weight: 700;
+			padding-bottom: 24px;
+			text-align: right;
+		}
+		.site button{
+			margin-right: 48px;
+			padding: 5px 20px;
+			width: 140px;
+			border: 1px solid #f0f0f0;
+			background:rgba(0,0,0,0);
+			color: #f0f0f0;
+		}
+		.site button:hover{
+			background-color:#333333;
+			transition: 0.5s ease-in-out;
+		}
+		
+		.news-letter{
+			width: 100%;
+			height: 720px;
+			background-image: url(https://i.postimg.cc/cJNL0VRs/무제-2_대지_1.jpg);
+			background-size: cover;
+			background-position: center center;
+		}
+		.news-wi h4{
+			margin-left: 48px;
+			font-size: 32px;
+			padding-top: 80px;
+		}
+		.news-wi h3{
+			font-size: 72px;
+			margin-left: 48px;
+			padding-bottom: 16px;
+			font-weight: 700;
+		}
+		.news-wi p{
+			margin-left: 48px;
+			font-size: 16px;
+			padding-bottom: 32px;
+		}
+		.input{
+			margin-left: 48px;
+			width: 520px;
+		}
+		.no-1{
+			width: 520px;
+			line-height: 32px;
+			padding-left: 8px;
+			margin-bottom: 24px;
+			font-size: 14px;
+		}
+		.no-2{
+			width: 520px;
+			line-height: 32px;
+			padding-left: 8px;
+			margin-bottom: 24px;
+			font-size: 14px;
+		}
+		.no-3{
+			width: 520px;
+			line-height: 32px;
+			padding-left: 8px;
+			margin-bottom: 24px;
+			font-size: 14px;
+		}
+		.input button{
+			padding: 5px 20px;
+			font-size: 16px;
+			border: 1px solid #f0f0f0;
+			background:rgba(0,0,0,0);
+			color: #f0f0f0;
+			width: 140px;
+		}
+		.input button:hover{
+			background-color:#333333;
+			transition: 0.5s ease-in-out;
+		}
+		.footer{
+			background-color: #333333;
+			height: 240px;
+			color: #fff;
+		}
+		.foo-1 img{
+			margin-left: 48px;
+			margin-top: 42px;
+			margin-bottom : 6px;
+		}
+		.foo-1 h3{
+			font-size: 32px;
+			margin-top : 6px;
+			margin-bottom: 12px;
+			margin-left: 48px;
+		}
+		.foo-1 h5{
+			font-size: 16px;
+			margin-left: 48px;
+			margin-bottom: 12px;
+			font-weight: 500;
+		}
+		.foo-1 p{
+			font-size: 10px;
+			padding-bottom: 36px;
+			margin-left: 48px;
+		}
+
+	
+	/*태블릿*/
+
+		@media (max-width: 1024px) and (min-width:768px){
+		.carousel-item{
+			text-align: center;
+			height: 540px;
+		}
+		.item-1{
+			background-image: url(https://facerecordsnyc.com/wp-content/uploads/2018/12/RYUICHI-SAKAMOTO-1920x1080.jpg);
+			background-size: cover;
+			background-position: center left;
+			height: 540px;
+			width: 100%;
+		}
+		.item-2{
+			background-image: url(https://www.jungle.co.kr/image/a8e647104a879e1e768535b4);
+			background-size: cover;
+			background-position: center bottom;
+			height: 540px;
+			width: 100%;
+		}
+		.item-3{
+			background-image: url(https://www.noblesse.com/shop/data/board/magazine/3b55958d1e0c986e);
+			background-size: cover;
+			background-position: center top;
+			height: 540px;
+			width: 100%;
+		}
+		.word h1{
+			color: #fff;
+			font-size: 72px;
+			margin-top: 16px;
+     		margin-bottom: 36px;
+		}
+		.word a{
+			text-decoration: none;
+			color: #fff;
+			font-size: 16px;
+			padding: 8px 24px;
+			border: 1px solid #f0f0f0 ;
+		}
+		.helper{
+			height: 100%;
+     		display: inline-block;
+     		vertical-align: middle;
+		}
+		.word{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.photo{
+			height: 360px;
+			width: 50%;
+			background-image: url(https://i.postimg.cc/T11SNfBz/1.png);
+			background-position: center right;
+			background-size: cover;
+			float: left;
+		}
+		.introduce{
+			background-color: #fff;
+			height: 360px;
+			width: 50%;
+			float: left;
+			padding-right: 40px;
+			padding-left: 40px;
+			padding-top: 20px;
+		}
+		.intro-1 h5{
+			font-size: 14px;
+			color: #4B4B4B;
+			font-weight: 600;
+			margin-top :16px;
+			margin-left: 16px;
+		}
+		.intro-1 h3{
+			font-weight: 700;
+			color: #333333;
+			font-size: 32px;
+			margin-left: 16px;
+		}
+		.intro-1 p{
+			color: #333333;
+			font-size: 12px;
+			margin-left: 16px;
+			text-align: left;
+			
+		}
+		.clearfix{
+			clear: both;
+		}	
+		.album-page{
+			background-image: url(https://cdn.pixabay.com/photo/2016/11/29/01/22/album-1866523_1280.jpg);
+			background-position: center center;
+			background-size: cover;
+			height: 480px;
+			width: 100%;
+		}
+		.album-page h1{
+			font-size: 64px;
+			color: #fff;
+			font-weight: 700;
+			margin-left: 48px;
+			padding-top: 56px;
+			padding-bottom: 24px;
+		}
+		.album-page button{
+			margin-left: 48px;
+			padding: 5px 20px;
+			width: 140px;
+			border: 1px solid #f0f0f0;
+			background:rgba(0,0,0,0);
+			color: #f0f0f0;
+			margin-left: 48px;
+		}
+		.album-page button:hover{
+			background-color:#333333;
+			transition: 0.5s ease-in-out;
+		}
+		.info p{
+			font-size: 20px;
+			color: white;
+			border: 1px solid black;
+			border-radius: 5px;
+		}
+		.offical-site{
+			height: 480px;
+			width: 100%;
+			background-size: cover;
+			background-position: left center;
+			background-image: url(https://cdn.pixabay.com/photo/2019/05/02/16/02/piano-4173813_1280.jpg);
+			text-align: right;
+
+		}
+		.site h1{
+			color: #fff;
+			font-size: 64px;
+			padding-top: 56px;
+			font-weight: 700;
+			padding-bottom: 24px;
+			margin-right:48px;
+			text-align: right;
+		}
+		.site button{
+			padding: 5px 20px;
+			width: 140px;
+			border: 1px solid #f0f0f0;
+			background:rgba(0,0,0,0);
+			color: #f0f0f0;
+			margin-right:48px;
+			text-align: right;
+		}
+		.site button:hover{
+			background-color: #333333;
+			transition: 0.5s ease-in-out;
+		}
+		
+		.news-letter{
+			width: 100%;
+			height: 720px;
+			background-image: url(https://i.postimg.cc/cJNL0VRs/무제-2_대지_1.jpg);
+			background-size: cover;
+			background-position: center right;
+		}
+		.news-wi h4{
+			margin-left: 48px;
+			font-size: 24px;
+			padding-top: 80px;
+		}
+		.news-wi h3{
+			font-size: 48px;
+			margin-left: 48px;
+			padding-bottom: 16px;
+			font-weight: 700;
+		}
+		.news-wi p{
+			margin-left: 48px;
+			font-size: 14px;
+			padding-bottom: 32px;
+		}
+		.input{
+			margin-left: 48px;
+			width: 520px;
+		}
+		.no-1{
+			width: 460px;
+			line-height: 32px;
+			padding-left: 8px;
+			margin-bottom: 24px;
+			font-size: 14px;
+		}
+		.no-2{
+			width: 460px;
+			line-height: 32px;
+			padding-left: 8px;
+			margin-bottom: 24px;
+			font-size: 14px;
+		}
+		.no-3{
+			width: 460px;
+			line-height: 32px;
+			padding-left: 8px;
+			margin-bottom: 32px;
+			font-size: 14px;
+		}
+		.input button{
+			padding: 5px 20px;
+			font-size: 16px;
+			border: 1px solid #f0f0f0;
+			background:rgba(0,0,0,0);
+			color: #f0f0f0;
+			width: 140px;
+		}
+		.input button:hover{
+			background-color:#333333;
+			transition: 0.5s ease-in-out;
+		}
+		.footer{
+			background-color: #333333;
+			height: 240px;
+			color: #fff;
+			width: 100%;
+		}
+		.foo-1 img{
+			margin-left: 48px;
+			margin-top: 42px;
+			margin-bottom : 6px;
+		}
+		.foo-1 h3{
+			font-size: 32px;
+			margin-top : 6px;
+			margin-bottom: 12px;
+			margin-left: 48px;
+		}
+		.foo-1 h5{
+			font-size: 16px;
+			margin-left: 48px;
+			margin-bottom: 12px;
+			font-weight: 500;
+		}
+		.foo-1 p{
+			font-size: 10px;
+			padding-bottom: 36px;
+			margin-left: 48px;
+		}
+		}
+
+		/*모바일*/
+
+		@media (max-width: 767px){
+		.carousel-item{
+			text-align: center;
+			height: 640px;
+		}
+		.item-1{
+			background-image: url(https://facerecordsnyc.com/wp-content/uploads/2018/12/RYUICHI-SAKAMOTO-1920x1080.jpg);
+			background-size: cover;
+			background-position: center center;
+			height:640px;
+			width: 100%;
+		}
+		.item-2{
+			background-image: url(https://www.jungle.co.kr/image/a8e647104a879e1e768535b4);
+			background-size: cover;
+			background-position: center left;
+			height: 640px;
+			width: 100%;
+		}
+		.item-3{
+			background-image: url(https://www.noblesse.com/shop/data/board/magazine/3b55958d1e0c986e);
+			background-size: cover;
+			background-position: center right;
+			height: 640px;
+			width: 100%;
+		}
+		.word h1{
+			color: #fff;
+			font-size: 42px;
+			margin-top: 24px;
+     		margin-bottom: 36px;
+     		width: 100%;
+     		text-align: center;
+		}
+		.word a{
+			text-decoration: none;
+			color: #fff;
+			font-size: 16px;
+			padding: 8px 24px;
+			border: 1px solid #f0f0f0 ;
+		}
+		.helper{
+			height: 85%;
+     		display: inline-block;
+     		vertical-align: middle;
+		}
+		.word{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.photo{
+			height: 240px;
+			width: 100%;
+			background-image: url(https://i.postimg.cc/T11SNfBz/1.png);
+			background-position: center right;
+			background-size: cover;
+			float: left;
+		}
+		.introduce{
+			background-color: #fff;
+			height: 240px;
+			width: 100%;
+			float: left;
+			padding-right: 40px;
+			padding-top: 16px;
+		}
+		.intro-1 h5{
+			font-size: 14px;
+			color: #4B4B4B;
+			font-weight: 600;
+			margin-top :12px;
+			margin-left: 16px;
+		}
+		.intro-1 h3{
+			font-weight: 700;
+			color: #333333;
+			font-size: 32px;
+			margin-left: 16px;
+		}
+		.intro-1 p{
+			color: #333333;
+			font-size: 12px;
+			margin-left: 16px;
+			text-align: left;
+			
+		}
+		.clearfix{
+			clear: both;
+		}	
+		.album-page{
+			background-image: url(https://cdn.pixabay.com/photo/2016/11/29/01/22/album-1866523_1280.jpg);
+			background-position: center center;
+			background-size: cover;
+			height: 520px;
+			width: 100%;
+		}
+		.album-page h1{
+			font-size: 64px;
+			color: #fff;
+			font-weight: 700;
+			margin-left: 48px;
+			padding-top: 56px;
+			padding-bottom: 24px;
+		}
+		.album-page button{
+			margin-left: 48px;
+			padding: 5px 20px;
+			width: 140px;
+			border: 1px solid #f0f0f0;
+			background:rgba(0,0,0,0);
+			color: #f0f0f0;
+			margin-left: 48px;
+		}
+		.album-page button:hover{
+			background-color:#333333;
+			transition: 0.5s ease-in-out;
+		}
+		.info p{
+			font-size: 20px;
+			color: white;
+			border: 1px solid black;
+			border-radius: 5px;
+		}
+		.offical-site{
+			height: 520px;
+			width: 100%;
+			background-size: cover;
+			background-position: left center;
+			background-image: url(https://cdn.pixabay.com/photo/2019/05/02/16/02/piano-4173813_1280.jpg);
+			text-align: right;
+		}
+		.site h1{
+			color: #fff;
+			font-size: 64px;
+			padding-top: 56px;
+			font-weight: 700;
+			padding-bottom: 24px;
+			margin-right:48px;
+			text-align: right;
+		}
+		.site button{
+			padding: 5px 20px;
+			width: 140px;
+			border: 1px solid #f0f0f0;
+			background:rgba(0,0,0,0);
+			color: #f0f0f0;
+			margin-right:48px;
+			text-align: right;
+		}
+		.site button:hover{
+			background-color: #333333;
+			transition: 0.5s ease-in-out;
+		}
+		
+		.news-letter{
+			width: 100%;
+			height: 640px;
+			background-image: url(https://i.postimg.cc/cJNL0VRs/무제-2_대지_1.jpg);
+			background-size: cover;
+			background-position: center right;
+		}
+		.news-wi h4{
+			margin-left: 48px;
+			font-size: 16px;
+			padding-top: 80px;
+		}
+		.news-wi h3{
+			font-size: 40px;
+			margin-left: 48px;
+			padding-bottom: 16px;
+			font-weight: 700;
+		}
+		.news-wi p{
+			margin-left: 48px;
+			font-size: 12px;
+			padding-bottom: 32px;
+			margin-right: 48px;
+			color: #333333;
+		}
+		.input{
+			margin-left: 48px;
+			width: 420px;
+		}
+		.no-1{
+			width: 400px;
+			line-height: 32px;
+			padding-left: 8px;
+			margin-bottom: 24px;
+			font-size: 14px;
+		}
+		.no-2{
+			width: 400px;
+			line-height: 32px;
+			padding-left: 8px;
+			margin-bottom: 24px;
+			font-size: 14px;
+		}
+		.no-3{
+			width: 400px;
+			line-height: 32px;
+			padding-left: 8px;
+			margin-bottom: 32px;
+			font-size: 14px;
+		}
+		.input button{
+			padding: 5px 20px;
+			font-size: 16px;
+			border: 1px solid #f0f0f0;
+			background:rgba(0,0,0,0);
+			color: #f0f0f0;
+			width: 140px;
+		}
+		.input button:hover{
+			background-color:#333333;
+			transition: 0.5s ease-in-out;
+		}
+		.footer{
+			background-color: #333333;
+			height: 240px;
+			color: #fff;
+			width: 100%;
+		}
+		.foo-1 img{
+			margin-left: 48px;
+			margin-top: 42px;
+			margin-bottom : 6px;
+		}
+		.foo-1 h3{
+			font-size: 32px;
+			margin-top : 6px;
+			margin-bottom: 12px;
+			margin-left: 48px;
+		}
+		.foo-1 h5{
+			font-size: 16px;
+			margin-left: 48px;
+			margin-bottom: 12px;
+			font-weight: 500;
+		}
+		.foo-1 p{
+			font-size: 10px;
+			padding-bottom: 36px;
+			margin-left: 48px;
+		}
+
+		}
+	</style>
+
+
+</head>
+<body>
+	<!--navbar-->
+	<div class="navbar">
+			<a href="Home.html">
+				<img src="https://i.postimg.cc/cLCWN19h/image.png" width="50px" height="50px" alt="logo"></a>
+
+		<ul class="menu">
+			<li class="about"><a href="Home.html">Home</a></li>
+			<li><a href="discography.html">Discography</a></li>
+		</ul>
+	</div>
+
+
+	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  		<div class="carousel-inner">
+    	<div class="carousel-item active item-1">
+    		<div class="helper"></div><div class="word">
+      			<h1>Ryuichi Sakamoto</h1>
+      			<br>
+      			<a href="discography.html">LOOK HIS ALBUM</a>
+      		</div>
+    	</div>
+
+    	<div class="carousel-item item-2">
+    		<div class="helper"></div>
+    		<div class="word">
+      			<h1>Ryuichi Sakamoto</h1>
+      			<br>
+      			<a href="discography.html">LOOK HIS ALBUM</a>
+      		</div>
+    	</div>
+
+    	<div class="carousel-item item-3">
+    		<div class="helper"></div>
+      		<div class="word">
+      			<h1>Ryuichi Sakamoto</h1>
+      			<br>
+      			<a href="discography.html">LOOK HIS ALBUM</a>
+      		</div>
+    	</div>
+  	</div>
+
+  	<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Previous</span>
+  	</a>
+  	<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+    	<span class="sr-only">Next</span>
+  	</a>
+</div>
+	<div class="all">
+
+		<div class="photo"></div>
+
+		<div class="introduce">
+			<div class="helper-1"></div>
+			<div class="intro-1">
+			<h5>세계적인 작곡자이자 피아니스트</h5>
+			<h3>Ryuichi Sakamoto</h3>
+			<hr>
+			<p>70년 가까이 음악적인 삶을 살아온 류이치 사카모토는 Haruomi Hosono의 Yellow Magic Orchestra에서 활동하며 Synthpop의 발판을 마련하는 것에 일조했습니다. 수년 동안 [The last Emperor], [Merry Christmas Mr. Lawrence] 등 30편이 넘는 영화의 OST를 담당하였으며, 최근 그는 멀티미디어 오페라를 쓰고, 눈이 녹는 소리를 녹음하기 위해 북극을 여행했다고 합니다. </p></div>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+
+		<div class="album-page">
+			<div class="info-prev">
+				<div class="info">
+					<h1>New album<br>Relase<br>News</h1>
+					<a href="async.html"><button>View more</button></a>
+				</div>
+			</div>
+		</div>
+
+		<div class="offical-site">
+			<div class="offical-prev">
+				<div class="site">
+					<h1>Go to the<br>Offical<br>Site</h1>
+					<a href="http://www.sitesakamoto.com/"><button>View more</button></a>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="news-letter">
+			<div class="news-wi">
+				<h4>STUDIO SAKAMOTO</h4>
+				<h3>News-Letter</h3>
+				<p>새로운 류이치 사카모토의 앨범 발매 소식을 바로 받고 싶으시다면 Studio Sakamoto를 구독해 주세요!
+				<br>주어진 양식을 작성해주시면 매달 새로운 뉴스를 이메일로 보내드립니다.</p>
+
+				<div class="input">
+					<input type="text" name="name" placeholder="NAME" class="no-1">
+					<input type="text" name="tel" placeholder="Phone-Number" class="no-2">
+					<input type="email" name="email" placeholder="Email" class="no-3">
+					<button>Send</button>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="footer">
+			<div class="footer-prev">
+				<div class="foo-1">
+					<img class="logo" src="https://i.postimg.cc/cLCWN19h/image.png" width="50px" height="50px" alt="logo">
+					<h3><b>STUDIO SAKAMOTO</b></h3>
+					<h5>pianist & producer</h5>
+					<p>Copyright © 2020 Studio Sakamoto Corp. All rights reserved.
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</body>
+</html>
